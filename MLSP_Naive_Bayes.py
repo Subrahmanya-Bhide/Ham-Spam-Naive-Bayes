@@ -38,7 +38,7 @@ for spam in spams:
 spam_words_count = len(spam_vocabulary)
 spam_words_prob = copy.deepcopy(spam_count_words)
 for word in spam_words_prob:
-    spam_words_prob[word] = (spam_words_prob[word] + 1) /(spam_words_count + len(spam_vocabulary))
+    spam_words_prob[word] = (spam_words_prob[word] + 1) /(spam_words_count)
         
 #%%for hams
 ham_vocabulary =[]
@@ -55,7 +55,7 @@ for ham in hams:
 ham_words_count = len(ham_vocabulary)
 ham_words_prob = copy.deepcopy(ham_count_words)
 for word in ham_words_prob:
-    ham_words_prob[word] = (ham_words_prob[word] + 1) / (ham_words_count + len(ham_vocabulary))        
+    ham_words_prob[word] = (ham_words_prob[word] + 1) / (ham_words_count)        
 
 
 ham_prob = n_ham/(n_ham + n_spam)
